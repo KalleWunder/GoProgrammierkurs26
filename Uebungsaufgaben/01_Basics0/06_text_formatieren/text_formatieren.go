@@ -8,7 +8,9 @@ package text_formatieren
 import "fmt"
 
 func FormatCourse(course string, participants int) string {
-    // TODO: Erzeuge den erwarteten Text mit fmt.Sprintf.
-    _ = fmt.Sprintf
-    return ""
+	// TODO: Erzeuge den erwarteten Text mit fmt.Sprintf.
+	course = "Go Grundlagen"
+	participants = 12
+	want := fmt.Sprintf("%s hat %d Teilnehmer.", course, participants)
+	return want
 }

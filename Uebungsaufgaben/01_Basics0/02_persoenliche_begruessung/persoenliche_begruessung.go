@@ -6,6 +6,7 @@ package persoenliche_begruessung
 // Die Funktion wird automatisch durch die zugehörige Testdatei geprüft.
 
 func Greeting(name string) string {
-    // TODO: Erzeuge eine persönliche Begrüßung.
-    return ""
+	// TODO: Erzeuge eine persönliche Begrüßung.
+	greets := "Hallo, " + name + "!"
+	return greets
 }
