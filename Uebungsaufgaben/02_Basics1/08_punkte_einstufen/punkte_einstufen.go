@@ -6,6 +6,16 @@ package punkte_einstufen
 // Die Funktion wird automatisch durch die zugehörige Testdatei geprüft.
 
 func ClassifyPoints(points int) string {
-    // TODO: Klassifiziere die Punkte.
-    return ""
+	// TODO: Klassifiziere die Punkte.
+	if points >= 90 {
+		return "sehr gut"
+	}
+	if points >= 75 {
+		return "gut"
+	}
+	if points >= 50 {
+		return "besdstanden"
+	} else {
+		return "nicht bestanden"
+	}
 }
