@@ -20,18 +20,24 @@ type Rectangle struct {
 // Die Methode bekommt also einen Rectangle-WERT.
 func (r Rectangle) Area() float64 {
 	// TODO: Width * Height
-	return 0
+	Area := r.Width * r.Height
+	return Area
 }
 
 // Perimeter gibt den Umfang zurück.
 func (r Rectangle) Perimeter() float64 {
 	// TODO: 2*Width + 2*Height
-	return 0
+	Perimeter := 2*r.Width + 2*r.Height
+	return Perimeter
 }
 
 // Scaled soll ein NEUES Rechteck zurückgeben, dessen Seiten mit factor
 // multipliziert wurden. Das ursprüngliche Rectangle darf nicht verändert werden.
 func (r Rectangle) Scaled(factor float64) Rectangle {
+	r.Width *= factor
+	r.Height *= factor
+
 	// TODO: Verändere die Kopie r und gib sie zurück.
-	return Rectangle{}
+
+	return r
 }

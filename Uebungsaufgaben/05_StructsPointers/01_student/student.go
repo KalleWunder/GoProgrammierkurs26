@@ -26,12 +26,20 @@ type Student struct {
 //	    Semester: ...,
 //	}
 func NewStudent(name string, age int, semester int) Student {
-	// TODO: Erzeuge und returne den Student.
-	return Student{}
+	// TODO: Erzeuge und returne den Student
+
+	return Student{
+		Name:     name,
+		Age:      age,
+		Semester: semester,
+	}
 }
 
 // IsFirstSemester soll true liefern, wenn der Student im 1. Semester ist.
 func IsFirstSemester(s Student) bool {
 	// TODO: Greife mit s.Semester auf das Feld zu.
-	return false
+	if s.Semester != 1 {
+		return false
+	}
+	return true
 }
