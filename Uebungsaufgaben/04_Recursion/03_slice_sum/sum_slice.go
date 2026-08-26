@@ -25,11 +25,14 @@ package slicesum
 func SumSlice(numbers []int) int {
 	// TODO 1:
 	// Was soll bei einem leeren Slice zurückgegeben werden?
+	if len(numbers) <= 0 {
+		return 0
+	}
+	return numbers[0] + SumSlice(numbers[1:])
 
 	// TODO 2:
 	// Addiere das erste Element zum Ergebnis des restlichen Slices.
 
-	return 0
 }
 
 // Experiment:

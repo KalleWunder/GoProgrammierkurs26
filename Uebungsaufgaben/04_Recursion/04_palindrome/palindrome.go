@@ -42,8 +42,14 @@ func IsPalindrome(text string) bool {
 	//     text[0]
 	//     text[len(text)-1]
 	//     text[1 : len(text)-1]
+	if len(text) <= 1 {
+		return true
+	}
 
-	return false
+	if text[0] != text[len(text)-1] {
+		return false
+	}
+	return IsPalindrome(text[1 : len(text)-1])
 }
 
 // Experiment:

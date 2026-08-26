@@ -1,5 +1,7 @@
 package sum
 
+import "fmt"
+
 // Übung 1 – Erste Rekursion: Summe von 1 bis n
 // Schwierigkeit: ★☆☆☆☆
 //
@@ -31,22 +33,18 @@ package sum
 //
 // Für n <= 0 soll 0 zurückgegeben werden.
 func SumTo(n int) int {
+	fmt.Println("SumTo aufgerufen mit:", n)
 
-	// TODO 1:
-	// Implementiere zuerst den Abbruchfall.
-	//
-	// Frage:
-	// Was ist das Ergebnis von SumTo(0)?
+	if n <= 0 {
+		return 0
+	}
+	return n + SumTo(n-1)
 
-	// TODO 2:
-	// Implementiere danach den rekursiven Fall.
-	//
-	// Hinweis:
-	//
-	//     SumTo(n) = n + SumTo(n - 1)
-
-	return 0
 }
+
+// Hinweis:
+//
+//     SumTo(n) = n + SumTo(n - 1)
 
 // Experiment:
 //

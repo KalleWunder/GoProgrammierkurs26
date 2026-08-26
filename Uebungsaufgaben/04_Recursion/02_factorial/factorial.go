@@ -1,5 +1,7 @@
 package factorial
 
+import "fmt"
+
 // Übung 2 – Fakultät und der Call Stack
 // Schwierigkeit: ★☆☆☆☆
 //
@@ -31,9 +33,15 @@ package factorial
 // Danach kommen die Ergebnisse in umgekehrter Reihenfolge zurück.
 
 func Factorial(n int) int {
+	fmt.Println("Start:", n)
 	// TODO:
 	// Implementiere Abbruchfall und rekursiven Fall.
-	return 0
+	if n <= 1 {
+		return 1
+
+	}
+	fmt.Println("Ende:", n)
+	return n * Factorial(n-1)
 }
 
 // Experiment:
